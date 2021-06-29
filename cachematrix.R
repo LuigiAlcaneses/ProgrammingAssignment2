@@ -1,3 +1,6 @@
+#get value of the matrix and set the value of the inverse, and get the value of the inverse
+#the above is done by the list function
+
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
         set <- function(y){
@@ -10,7 +13,10 @@ makeCacheMatrix <- function(x = matrix()) {
                 list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
 
-
+#compute the inverse of the matrix
+#first check if the inverse has already been calculated with the isnull
+#once retrieved, display message and then return the inverse
+#to compute inverse of matrix, set value of inverse on the cache using setinverse function
 
 cacheSolve <- function(x, ...) {
         inv <- x$getInverse()
